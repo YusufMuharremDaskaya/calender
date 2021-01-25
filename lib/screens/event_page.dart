@@ -77,8 +77,8 @@ class EventScreen extends StatelessWidget {
        FirebaseFirestore.instance.collection("events")
            .doc(element.id)
            .delete()
-           .then((value) => print("User Deleted"))
-           .catchError((error) => print("Failed to delete user: $error"));
+           .then((value) => print("event Deleted"))
+           .catchError((error) => print("Failed to delete event: $error"));
      }
     }));
 

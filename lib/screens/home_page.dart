@@ -2,9 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-import 'add_event.dart';
 import 'home.dart';
+import 'email_signin.dart';
+import 'email_register.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -35,7 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
               Spacer(),
               Row(
                 children: [
-
+                  Spacer(),
+                  RaisedButton(
+                      child: Text("e-mail ile giriş yap"),
+                      onPressed:() {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
+                      }),
+                  Spacer(),
+                  RaisedButton(
+                      child: Text("e-mail ile kayıt ol"),
+                      onPressed:() {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
+                      } ),
+                  Spacer()
                 ],
               ),
               RaisedButton(

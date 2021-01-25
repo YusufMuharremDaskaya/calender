@@ -122,7 +122,7 @@ class _AddPageState extends State<AddPage>{
       "konum" : event.konum,
       "title" : event.title,
       "user" : FirebaseAuth.instance.currentUser.uid})
-        .then((value) => print("User Added"))
+        .then((value) => print("event Added"))
         .catchError((error) => print("Failed to add event: $error"));
   }
 }
