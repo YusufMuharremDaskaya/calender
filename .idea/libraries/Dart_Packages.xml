@@ -128,6 +128,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_localizations">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../../src/flutter/packages/flutter_localizations/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -323,6 +330,7 @@
       <root url="file://$PROJECT_DIR$/../../../../../src/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0-nullsafety.3/lib" />
       <root url="file://$PROJECT_DIR$/../../../../../src/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../../../src/flutter/packages/flutter/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../../src/flutter/packages/flutter_localizations/lib" />
       <root url="file://$PROJECT_DIR$/../../../../../src/flutter/packages/flutter_test/lib" />
       <root url="file://$PROJECT_DIR$/../../../../../src/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>

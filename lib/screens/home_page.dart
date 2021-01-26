@@ -37,12 +37,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Spacer(),
                   RaisedButton(
+
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      side: BorderSide(color: Color.fromRGBO(82, 0, 0, 1)),
+                    ),
                       child: Text("e-mail ile giriş yap"),
                       onPressed:() {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
                       }),
                   Spacer(),
                   RaisedButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        side: BorderSide(color: Color.fromRGBO(82, 0, 0, 1)),
+                      ),
                       child: Text("e-mail ile kayıt ol"),
                       onPressed:() {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
@@ -51,7 +60,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
               RaisedButton(
-
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    side: BorderSide(color: Color.fromRGBO(82, 0, 0, 1)),
+                  ),
                   child: Text("gmail ile giriş yap"),
                   onPressed:() async {
                     await Firebase.initializeApp();

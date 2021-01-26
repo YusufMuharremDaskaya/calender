@@ -32,6 +32,15 @@ class _SignInPageState extends State<SignInPage> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromRGBO(82, 0, 0, 1),
+                        ),
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      hintText: ("mailinizi giriniz")
+                  ),
                   onChanged:(value){
                     mail = value;
                   },
@@ -40,12 +49,25 @@ class _SignInPageState extends State<SignInPage> {
               Padding(
                   padding: EdgeInsets.all(10),
                 child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromRGBO(82, 0, 0, 1),
+                        ),
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      hintText: ("mailinizi giriniz")
+                  ),
                   onChanged: (value){
                     password = value;
                   },
                 ),
               ),
               RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    side: BorderSide(color: Color.fromRGBO(82, 0, 0, 1)),
+                  ),
                   child: Text("e-mail ile giriş yap"),
                   onPressed:() async {
                     await Firebase.initializeApp();
