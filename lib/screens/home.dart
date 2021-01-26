@@ -679,20 +679,27 @@ class _HomePageState extends State<HomePage> {
 
   buildEvents() {
     return Container(
-      child: ListView.builder(
-
+      child: ListView.separated(
+        separatorBuilder: (context, index) => Divider(
+          color: Colors.black,
+        ),
         itemCount: thisEvents.length,
         itemBuilder: (context, index) {
           return ListTile(
+
               title: Text(thisEvents[index].title),
+              subtitle: Text("${thisEvents[index].hour}.${thisEvents[index].minute}  ${thisEvents[index].day}/${thisEvents[index].month}/${thisEvents[index].year}"),
               onTap: () async {
                 await Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
                             EventScreen(event: thisEvents[index])));
-              getEvents();
-              thisEvents = [];
+
+              setState(() {
+                thisEvents = [];
+
+              });
               });
         },
       ),
@@ -703,7 +710,7 @@ class _HomePageState extends State<HomePage> {
       width: MediaQuery
           .of(context)
           .size
-          .width / 1.2,
+          .width / 1.1,
     );
   }
 
